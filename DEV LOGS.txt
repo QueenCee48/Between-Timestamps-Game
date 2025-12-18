@@ -1,0 +1,38 @@
+DEV LOGS
+
+12/16/25
+
+Completed:
+- Updated the expanded time controls to display in front of any open windows.
+- Created first txt file that can be opened/closed and dragged around.
+- Finished files for File Explorer window.
+- Implement instantiating window content based on the app & time layer.
+
+12/17/25
+
+Completed:
+- Fixed bug for file explorer content not updating based on current time layer.
+
+Next To-Do:
+- Fix multiple open files changing to be the same file when switching time layers.
+
+Possible Future Fixes:
+- Prevent the same window/file from having multiple instances open...
+- Variables to keep track of which files were opened or not...
+- Once all versions of a file have been opened, either have them all reset to the correct one to stabilize OR the player gets to choose which one they all reset to to stabilize...
+- back to the future easter egg fading in the photos...
+- power button takes half the time away
+- speaker on desktop for sound
+- settings for hints possibly
+- assignment button can have the window that opens to the assignment. 
+
+Planned Features:
+- flash color of which timeline was affected
+- possibly deleting files
+- track when files are open...opening certain files removes the files in other layers
+- filler/content 1-2 files in recycle bin on all layers
+- possibly time pressure to submit report
+- notification can be repeat reminders to submit report
+- start with the assignment window open
+- icon on the right can be where the notifications pop up
+- talkgpt convo with doctor about her asking how does she know if she's a good doc
