@@ -146,10 +146,6 @@ public class WndwAreaCntrlr : MonoBehaviour
 
     public void OpenFile(GameObject txtFile, Sprite presImg, Sprite pastImg, Sprite corrImg)
     {
-        // this.presImage = presImg;
-        // this.pastImage = pastImg;
-        // this.corrImage = corrImg;
-
         newFile = Instantiate(txtFile, transform);
 
         txtFileCntrlr = newFile.GetComponent<TxtFileController>();
@@ -159,8 +155,6 @@ public class WndwAreaCntrlr : MonoBehaviour
         txtFileCntrlr.corrImage = corrImg;
 
         txtFileCntrlr.UpdateFile();
-
-        newFile = Instantiate(txtFile, transform);
         
         if (timeCntrlr.IsInPresent() && presImage != null)
         {

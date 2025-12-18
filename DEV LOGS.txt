@@ -12,9 +12,10 @@ Completed:
 
 Completed:
 - Fixed bug for file explorer content not updating based on current time layer.
+- Implemented changing file content based on app & time layer.
+- Fixed bug for multiple open files changing to be the same file when switching time layers.
 
 Next To-Do:
-- Fix multiple open files changing to be the same file when switching time layers.
 
 Possible Future Fixes:
 - Prevent the same window/file from having multiple instances open...
@@ -23,8 +24,6 @@ Possible Future Fixes:
 - back to the future easter egg fading in the photos...
 - power button takes half the time away
 - speaker on desktop for sound
-- settings for hints possibly
-- assignment button can have the window that opens to the assignment. 
 
 Planned Features:
 - flash color of which timeline was affected
@@ -34,5 +33,8 @@ Planned Features:
 - possibly time pressure to submit report
 - notification can be repeat reminders to submit report
 - start with the assignment window open
+- settings for hints possibly
+- assignment button can have the window that opens to the assignment. 
 - icon on the right can be where the notifications pop up
 - talkgpt convo with doctor about her asking how does she know if she's a good doc
+- power button takes half the time away
