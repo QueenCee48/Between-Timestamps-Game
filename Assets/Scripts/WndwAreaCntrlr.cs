@@ -29,6 +29,10 @@ public class WndwAreaCntrlr : MonoBehaviour
     public GameObject fileExpPastContent;
     public GameObject fileExpCorrContent;
 
+    public GameObject msgsPresContent;
+    public GameObject msgsPastContent;
+    public GameObject msgsCorrContent;
+
     string lastLayer;
 
     // Start is called before the first frame update
@@ -90,6 +94,7 @@ public class WndwAreaCntrlr : MonoBehaviour
                 break;
             case "Messages":
                 windowCntrlr.SetTitle("Messages");
+                windowCntrlr.SetWindowContent(msgsPresContent, msgsPastContent, msgsCorrContent, timeCntrlr);
                 break;
             case "CorruptionAnalyzer":
                 windowCntrlr.SetTitle("Corruption Analyzer");
@@ -136,6 +141,7 @@ public class WndwAreaCntrlr : MonoBehaviour
                     case "Trash":
                         break;
                     case "Messages":
+                        window.GetComponent<WindowController>().SetWindowContent(msgsPresContent, msgsPastContent, msgsCorrContent, timeCntrlr);
                         break;
                     case "Corruption Analyzer":
                         break;

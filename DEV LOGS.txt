@@ -15,7 +15,20 @@ Completed:
 - Implemented changing file content based on app & time layer.
 - Fixed bug for multiple open files changing to be the same file when switching time layers.
 
+12/21/25
+
+Completed:
+- Implemented scroll logic for the messages.
+- Implemented logic to switch between message conversations.
+
+12/22/25
+
+Completed:
+- Messages content is completed.
+- Implement logic to change messages content per time layer
+
 Next To-Do:
+- Next app
 
 Possible Future Fixes:
 - Prevent the same window/file from having multiple instances open...
@@ -24,17 +37,18 @@ Possible Future Fixes:
 - back to the future easter egg fading in the photos...
 - power button takes half the time away
 - speaker on desktop for sound
-
-Planned Features:
+- setup game state checker to see if each message thread in each time layer has been read
 - flash color of which timeline was affected
 - possibly deleting files
 - track when files are open...opening certain files removes the files in other layers
+- settings for hints possibly
+- power button takes half the time away
+
+Planned Features:
 - filler/content 1-2 files in recycle bin on all layers
 - possibly time pressure to submit report
 - notification can be repeat reminders to submit report
 - start with the assignment window open
-- settings for hints possibly
 - assignment button can have the window that opens to the assignment. 
 - icon on the right can be where the notifications pop up
 - talkgpt convo with doctor about her asking how does she know if she's a good doc
-- power button takes half the time away

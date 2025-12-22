@@ -7,6 +7,8 @@ TagManager:
   - App
   - Window
   - TxtFile
+  - ValeConvo
+  - EvanConvo
   layers:
   - Default
   - TransparentFX
