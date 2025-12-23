@@ -958,6 +958,7 @@ MonoBehaviour:
   msgsPresContent: {fileID: 606299893076885343, guid: b2496d6799f79c1418f6b550df01b56d, type: 3}
   msgsPastContent: {fileID: 1369961283508301822, guid: cc44bd32519be354f8c28814af695bc1, type: 3}
   msgsCorrContent: {fileID: 1680487381001488391, guid: 67d9b88aa3056424087bf406ff0f4bae, type: 3}
+  notesContent: {fileID: 1957120096125624348, guid: 03ba6f0a09c290445a27cbc80199fef0, type: 3}
 --- !u!1 &1075418883
 GameObject:
   m_ObjectHideFlags: 0

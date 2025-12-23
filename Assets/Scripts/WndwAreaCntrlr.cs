@@ -33,6 +33,8 @@ public class WndwAreaCntrlr : MonoBehaviour
     public GameObject msgsPastContent;
     public GameObject msgsCorrContent;
 
+    public GameObject notesContent;
+
     string lastLayer;
 
     // Start is called before the first frame update
@@ -79,6 +81,7 @@ public class WndwAreaCntrlr : MonoBehaviour
                 break;
             case "Notes":
                 windowCntrlr.SetTitle("Notes");
+                windowCntrlr.SetWindowContent(notesContent, notesContent, notesContent, timeCntrlr);
                 break;
             case "Photos":
                 windowCntrlr.SetTitle("Photos");
