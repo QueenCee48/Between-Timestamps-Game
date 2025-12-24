@@ -959,6 +959,9 @@ MonoBehaviour:
   msgsPastContent: {fileID: 1369961283508301822, guid: cc44bd32519be354f8c28814af695bc1, type: 3}
   msgsCorrContent: {fileID: 1680487381001488391, guid: 67d9b88aa3056424087bf406ff0f4bae, type: 3}
   notesContent: {fileID: 1957120096125624348, guid: 03ba6f0a09c290445a27cbc80199fef0, type: 3}
+  photosPresContent: {fileID: 46751339037314558, guid: 2bcae673dd5e02342ace2b9771523e6d, type: 3}
+  photosPastContent: {fileID: 905358408524618436, guid: c284e328d7969604a9f3f39d3413ccca, type: 3}
+  photosCorrContent: {fileID: 1945698740091354688, guid: f347cf7c9c5a14249b652491838e5d54, type: 3}
 --- !u!1 &1075418883
 GameObject:
   m_ObjectHideFlags: 0

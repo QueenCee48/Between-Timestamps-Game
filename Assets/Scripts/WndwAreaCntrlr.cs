@@ -35,6 +35,10 @@ public class WndwAreaCntrlr : MonoBehaviour
 
     public GameObject notesContent;
 
+    public GameObject photosPresContent;
+    public GameObject photosPastContent;
+    public GameObject photosCorrContent;
+
     string lastLayer;
 
     // Start is called before the first frame update
@@ -85,6 +89,7 @@ public class WndwAreaCntrlr : MonoBehaviour
                 break;
             case "Photos":
                 windowCntrlr.SetTitle("Photos");
+                windowCntrlr.SetWindowContent(photosPresContent, photosPastContent, photosCorrContent, timeCntrlr);
                 break;
             case "Terminal":
                 windowCntrlr.SetTitle("Terminal");
@@ -134,8 +139,10 @@ public class WndwAreaCntrlr : MonoBehaviour
                         window.GetComponent<WindowController>().SetWindowContent(fileExpPresContent, fileExpPastContent, fileExpCorrContent, timeCntrlr);
                         break;
                     case "Notes":
+                        window.GetComponent<WindowController>().SetWindowContent(notesContent, notesContent, notesContent, timeCntrlr);
                         break;
                     case "Photos":
+                        window.GetComponent<WindowController>().SetWindowContent(photosPresContent, photosPastContent, photosCorrContent, timeCntrlr);
                         break;
                     case "Terminal":
                         break;

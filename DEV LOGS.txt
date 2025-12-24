@@ -28,10 +28,11 @@ Completed:
 - Implement logic to change messages content per time layer.
 - Notes content is completed.
 - Reused file explorer logic for the notes app.
+- Photos content is completed.
+- Reused file explorer logic for the photos app.
 
 Next To-Do:
-- Draw images for photos app
-- Possibly use the file explorer logic again??
+- Next app
 
 Possible Future Fixes:
 - Prevent the same window/file from having multiple instances open...
