@@ -11,7 +11,7 @@ public class AppController : MonoBehaviour, IDragHandler, IPointerDownHandler, I
     RectTransform rect;
     RectTransform parentRect;
 
-    WndwAreaCntrlr wndwAreaCntrlr;
+    private WndwAreaCntrlr wndwAreaCntrlr;
 
     Vector2 lastValidPos;
     bool isDragging;

@@ -22,9 +22,6 @@ public class MsgsController : MonoBehaviour, IPointerClickHandler
     
     public MsgsThreadMngr manager;
 
-    bool valeUnread;
-    bool evanUnread;
-
     void Awake()
     {
         selectedColorPres = new Color32(131, 255, 244, 255);
@@ -39,9 +36,6 @@ public class MsgsController : MonoBehaviour, IPointerClickHandler
         myThreadImg = GetComponent<Image>();
 
         timeCntrlr3 = GameObject.Find("TimeControls").GetComponent<TimeController>();
-
-        // valeUnread = true;
-        // evanUnread = true;
     }
 
     // Start is called before the first frame update

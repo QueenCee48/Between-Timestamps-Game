@@ -13,11 +13,11 @@ public class TxtIconController : MonoBehaviour, IPointerClickHandler
 
     public Text txtIconLabel;
 
-    WndwAreaCntrlr wndwAreaCntrlr2;
+    private WndwAreaCntrlr wndwAreaCntrlr;
 
     void Awake()
     {
-        wndwAreaCntrlr2 = GameObject.Find("WindowArea").GetComponent<WndwAreaCntrlr>();
+        wndwAreaCntrlr = GameObject.Find("WindowArea").GetComponent<WndwAreaCntrlr>();
     }
 
     // Start is called before the first frame update
@@ -34,7 +34,7 @@ public class TxtIconController : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        wndwAreaCntrlr2.OpenFile(txtFilePrefab, presImg, pastImg, corrImg);
+        wndwAreaCntrlr.OpenFile(txtFilePrefab, presImg, pastImg, corrImg);
     }
 
 }

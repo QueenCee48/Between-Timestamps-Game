@@ -15,7 +15,7 @@ public class TxtFileController : MonoBehaviour, IDragHandler, IPointerDownHandle
     public Sprite pastImage;
     public Sprite corrImage;
 
-    TimeController timeCntrlr2;
+    private TimeController timeCntrlr;
     Image img;
 
     void Awake()
@@ -25,7 +25,7 @@ public class TxtFileController : MonoBehaviour, IDragHandler, IPointerDownHandle
         parentRect = GameObject.Find("WindowArea").GetComponent<RectTransform>();
 
         img = GetComponent<Image>();
-        timeCntrlr2 = GameObject.Find("TimeControls").GetComponent<TimeController>();
+        timeCntrlr = GameObject.Find("TimeControls").GetComponent<TimeController>();
     }
 
     // Start is called before the first frame update
@@ -69,15 +69,15 @@ public class TxtFileController : MonoBehaviour, IDragHandler, IPointerDownHandle
 
     public void UpdateFile()
     {
-        if (timeCntrlr2.IsInPresent() && presImage != null)
+        if (timeCntrlr.IsInPresent() && presImage != null)
         {
             img.sprite = presImage;
         }
-        else if (timeCntrlr2.IsInPast() && pastImage != null)
+        else if (timeCntrlr.IsInPast() && pastImage != null)
         {
             img.sprite = pastImage;
         }
-        else if (timeCntrlr2.IsInCorrupt() && corrImage != null)
+        else if (timeCntrlr.IsInCorrupt() && corrImage != null)
         {
             img.sprite = corrImage;
         }

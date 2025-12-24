@@ -962,6 +962,7 @@ MonoBehaviour:
   photosPresContent: {fileID: 46751339037314558, guid: 2bcae673dd5e02342ace2b9771523e6d, type: 3}
   photosPastContent: {fileID: 905358408524618436, guid: c284e328d7969604a9f3f39d3413ccca, type: 3}
   photosCorrContent: {fileID: 1945698740091354688, guid: f347cf7c9c5a14249b652491838e5d54, type: 3}
+  terminalContent: {fileID: 2035032772860924656, guid: 089432ebe75c2c047b992e85db6f3652, type: 3}
 --- !u!1 &1075418883
 GameObject:
   m_ObjectHideFlags: 0

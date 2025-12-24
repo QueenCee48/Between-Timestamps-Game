@@ -31,8 +31,14 @@ Completed:
 - Photos content is completed.
 - Reused file explorer logic for the photos app.
 
+12/24/25
+
+Completed:
+- 
+
 Next To-Do:
-- Next app
+- Setup prepared responses for terminal commands per time layer
+- Implement logic to make the terminal text scrollable
 
 Possible Future Fixes:
 - Prevent the same window/file from having multiple instances open...
@@ -47,6 +53,7 @@ Possible Future Fixes:
 - track when files are open...opening certain files removes the files in other layers
 - settings for hints possibly
 - power button takes half the time away
+- info button for the photos to show the metadata
 
 Planned Features:
 - filler/content 1-2 files in recycle bin on all layers

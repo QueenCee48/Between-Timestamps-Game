@@ -18,8 +18,8 @@ public class WndwAreaCntrlr : MonoBehaviour
     public GameObject[] openWindows;
     public GameObject[] openFiles;
 
-    TimeController timeCntrlr;
-    WindowController windowCntrlr;
+    private TimeController timeCntrlr;
+    private WindowController windowCntrlr;
     TxtFileController txtFileCntrlr;
 
     GameObject newWindow;
@@ -39,7 +39,9 @@ public class WndwAreaCntrlr : MonoBehaviour
     public GameObject photosPastContent;
     public GameObject photosCorrContent;
 
-    string lastLayer;
+    public GameObject terminalContent;
+
+    private string lastLayer;
 
     // Start is called before the first frame update
     void Start()
@@ -93,6 +95,7 @@ public class WndwAreaCntrlr : MonoBehaviour
                 break;
             case "Terminal":
                 windowCntrlr.SetTitle("Terminal");
+                windowCntrlr.SetWindowContent(terminalContent, terminalContent, terminalContent, timeCntrlr);
                 break;
             case "TalkGPT":
                 windowCntrlr.SetTitle("TalkGPT");
@@ -145,6 +148,7 @@ public class WndwAreaCntrlr : MonoBehaviour
                         window.GetComponent<WindowController>().SetWindowContent(photosPresContent, photosPastContent, photosCorrContent, timeCntrlr);
                         break;
                     case "Terminal":
+                        window.GetComponent<WindowController>().SetWindowContent(terminalContent, terminalContent, terminalContent, timeCntrlr);
                         break;
                     case "TalkGPT":
                         break;
