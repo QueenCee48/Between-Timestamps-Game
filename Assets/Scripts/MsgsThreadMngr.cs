@@ -38,5 +38,17 @@ public class MsgsThreadMngr : MonoBehaviour
         {
             msgsContentCntrlr.DisplayEvanConvo();
         }
+        else if (thread.gameObject.name == "ProjectSummary")
+        {
+            msgsContentCntrlr.DisplayProjSumm();
+        }
+        else if (thread.gameObject.name == "ProfessionalReflection")
+        {
+            msgsContentCntrlr.DisplayProfRefl();
+        }
+        else if (thread.gameObject.name == "TemporalErasure")
+        {
+            msgsContentCntrlr.DisplayTempEras();
+        }
     }
 }

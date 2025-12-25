@@ -963,6 +963,9 @@ MonoBehaviour:
   photosPastContent: {fileID: 905358408524618436, guid: c284e328d7969604a9f3f39d3413ccca, type: 3}
   photosCorrContent: {fileID: 1945698740091354688, guid: f347cf7c9c5a14249b652491838e5d54, type: 3}
   terminalContent: {fileID: 2035032772860924656, guid: 089432ebe75c2c047b992e85db6f3652, type: 3}
+  talkgptPresContent: {fileID: 6052492906622575025, guid: 442b0f8d7691c3c429c0737e9dab5cbd, type: 3}
+  talkgptPastContent: {fileID: 1681342989653031360, guid: bd02773756522de4b8244ad420ce82c8, type: 3}
+  talkgptCorrContent: {fileID: 6473994531210218672, guid: 5aca87a0b374a354180915b716c18a42, type: 3}
 --- !u!1 &1075418883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,6 +1016,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   valeMsgRead: 0
   evanMsgRead: 0
+  projSummRead: 0
+  profReflRead: 0
+  tempErasRead: 0
 --- !u!1 &1106890992
 GameObject:
   m_ObjectHideFlags: 0

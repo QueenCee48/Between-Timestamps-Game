@@ -9,6 +9,9 @@ TagManager:
   - TxtFile
   - ValeConvo
   - EvanConvo
+  - ProjSumm
+  - ProfRefl
+  - TempEras
   layers:
   - Default
   - TransparentFX

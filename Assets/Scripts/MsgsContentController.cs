@@ -7,6 +7,9 @@ public class MsgsContentController : MonoBehaviour
 {
     public GameObject valeConvoPrefab;
     public GameObject evanConvoPrefab;
+    public GameObject projSummPrefab;
+    public GameObject profReflPrefab;
+    public GameObject tempErasPrefab;
 
     public ScrollRect scrollRect;
 
@@ -63,6 +66,66 @@ public class MsgsContentController : MonoBehaviour
         if (currentEvanConvo != null)
         {
             Destroy(currentEvanConvo);
+        }
+    }
+
+    public void DisplayProjSumm()
+    {
+        HideProfRefl();
+        HideTempEras();
+
+        GameObject convo = Instantiate(projSummPrefab, transform);
+
+        StartCoroutine(SnapToBottom());
+    }
+
+    public void HideProjSumm()
+    {
+        GameObject currentProjSumm = GameObject.FindWithTag("ProjSumm");
+
+        if (currentProjSumm != null)
+        {
+            Destroy(currentProjSumm);
+        }
+    }
+
+    public void DisplayProfRefl()
+    {
+        HideProjSumm();
+        HideTempEras();
+
+        GameObject convo = Instantiate(profReflPrefab, transform);
+
+        StartCoroutine(SnapToBottom());
+    }
+
+    public void HideProfRefl()
+    {
+        GameObject currentProfRefl = GameObject.FindWithTag("ProfRefl");
+
+        if (currentProfRefl != null)
+        {
+            Destroy(currentProfRefl);
+        }
+    }
+
+    public void DisplayTempEras()
+    {
+        HideProjSumm();
+        HideProfRefl();
+
+        GameObject convo = Instantiate(tempErasPrefab, transform);
+
+        StartCoroutine(SnapToBottom());
+    }
+
+    public void HideTempEras()
+    {
+        GameObject currentTempEras = GameObject.FindWithTag("TempEras");
+
+        if (currentTempEras != null)
+        {
+            Destroy(currentTempEras);
         }
     }
 }

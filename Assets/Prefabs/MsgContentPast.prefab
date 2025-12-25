@@ -370,7 +370,7 @@ GameObject:
   - component: {fileID: 8540069502826388338}
   - component: {fileID: 1476371169332266079}
   m_Layer: 5
-  m_Name: ConvoArea
+  m_Name: MsgConvoArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -703,6 +703,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   valeConvoPrefab: {fileID: 7450699348995670941, guid: 94c4e308ab4c82744be304e26b8445ac, type: 3}
   evanConvoPrefab: {fileID: 6257631842863937961, guid: 7ff2e098860331d46a47774a99ee082a, type: 3}
+  projSummPrefab: {fileID: 0}
+  profReflPrefab: {fileID: 0}
+  tempErasPrefab: {fileID: 0}
   scrollRect: {fileID: 8540069502826388338}
 --- !u!1 &5921123011920992645
 GameObject:

@@ -41,6 +41,10 @@ public class WndwAreaCntrlr : MonoBehaviour
 
     public GameObject terminalContent;
 
+    public GameObject talkgptPresContent;
+    public GameObject talkgptPastContent;
+    public GameObject talkgptCorrContent;
+
     private string lastLayer;
 
     // Start is called before the first frame update
@@ -99,6 +103,7 @@ public class WndwAreaCntrlr : MonoBehaviour
                 break;
             case "TalkGPT":
                 windowCntrlr.SetTitle("TalkGPT");
+                windowCntrlr.SetWindowContent(talkgptPresContent, talkgptPastContent, talkgptCorrContent, timeCntrlr);
                 break;
             case "Trash":
                 windowCntrlr.SetTitle("Trash");
@@ -151,6 +156,7 @@ public class WndwAreaCntrlr : MonoBehaviour
                         window.GetComponent<WindowController>().SetWindowContent(terminalContent, terminalContent, terminalContent, timeCntrlr);
                         break;
                     case "TalkGPT":
+                        window.GetComponent<WindowController>().SetWindowContent(talkgptPresContent, talkgptPastContent, talkgptCorrContent, timeCntrlr);
                         break;
                     case "Trash":
                         break;

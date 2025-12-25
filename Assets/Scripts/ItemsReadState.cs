@@ -9,6 +9,10 @@ public class ItemsReadState : MonoBehaviour
     public bool valeMsgRead = false;
     public bool evanMsgRead = false;
 
+    public bool projSummRead = false;
+    public bool profReflRead = false;
+    public bool tempErasRead = false;
+
     void Awake()
     {
         if (Instance != null)

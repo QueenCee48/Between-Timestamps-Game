@@ -24,14 +24,28 @@ public class MsgsController : MonoBehaviour, IPointerClickHandler
 
     void Awake()
     {
-        selectedColorPres = new Color32(131, 255, 244, 255);
-        unselectedColorPres = new Color32(12, 173, 159, 255);
+        if (gameObject.name == "ValeThread" || gameObject.name == "EvanThread")
+        {
+            selectedColorPres = new Color32(131, 255, 244, 255);
+            unselectedColorPres = new Color32(12, 173, 159, 255);
 
-        selectedColorPast = new Color32(131, 188, 255, 255);
-        unselectedColorPast = new Color32(56, 136, 231, 255);
+            selectedColorPast = new Color32(131, 188, 255, 255);
+            unselectedColorPast = new Color32(56, 136, 231, 255);
 
-        selectedColorCorr = new Color32(255, 121, 126, 255);
-        unselectedColorCorr = new Color32(238, 55, 66, 255);
+            selectedColorCorr = new Color32(255, 121, 126, 255);
+            unselectedColorCorr = new Color32(238, 55, 66, 255);
+        }
+        else if (gameObject.name == "ProjectSummary" || gameObject.name == "ProfessionalReflection" || gameObject.name == "TemporalErasure")
+        {
+            selectedColorPres = new Color32(99, 215, 205, 50);
+            unselectedColorPres = new Color32(99, 215, 205, 0);
+
+            selectedColorPast = new Color32(81, 159, 255, 50);
+            unselectedColorPast = new Color32(81, 159, 255, 0);
+
+            selectedColorCorr = new Color32(255, 106, 113, 50);
+            unselectedColorCorr = new Color32(255, 106, 113, 0);
+        }
 
         myThreadImg = GetComponent<Image>();
 
@@ -73,7 +87,6 @@ public class MsgsController : MonoBehaviour, IPointerClickHandler
                 }
             }
         }
-
         else if (gameObject.name == "EvanThread")
         {
             if (!ItemsReadState.Instance.evanMsgRead)
@@ -84,6 +97,27 @@ public class MsgsController : MonoBehaviour, IPointerClickHandler
                 {
                     notiBbl.enabled = false;
                 }
+            }
+        }
+        else if (gameObject.name == "ProjectSummary")
+        {
+            if (!ItemsReadState.Instance.projSummRead)
+            {
+                ItemsReadState.Instance.projSummRead = true;
+            }
+        }
+        else if (gameObject.name == "ProfessionalReflection")
+        {
+            if (!ItemsReadState.Instance.profReflRead)
+            {
+                ItemsReadState.Instance.profReflRead = true;
+            }
+        }
+        else if (gameObject.name == "TemporalErasure")
+        {
+            if (!ItemsReadState.Instance.tempErasRead)
+            {
+                ItemsReadState.Instance.tempErasRead = true;
             }
         }
     }

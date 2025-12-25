@@ -34,11 +34,20 @@ Completed:
 12/24/25
 
 Completed:
+- Setup prepared responses for terminal commands per time layer.
+- Implement logic to make the terminal text scrollable.
+- Terminal content is completed.
+- Setup previous TalkGPT conversations to view.
+- Reused messages logic.
+- TalkGPT content is completed.
+
+12/25/25
+
+Completed:
 - 
 
 Next To-Do:
-- Setup prepared responses for terminal commands per time layer
-- Implement logic to make the terminal text scrollable
+- Fix bug that makes terminal, messages and talkgpt scroll simultaneously instead of individually.
 
 Possible Future Fixes:
 - Prevent the same window/file from having multiple instances open...
