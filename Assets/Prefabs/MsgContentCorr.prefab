@@ -105,7 +105,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7395073667843021230}
   - component: {fileID: 396933005780127303}
-  - component: {fileID: 6577251270067738689}
   m_Layer: 5
   m_Name: MsgConvoArea
   m_TagString: Untagged
@@ -147,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Content: {fileID: 7038367879035014805}
   m_Horizontal: 0
-  m_Vertical: 0
+  m_Vertical: 1
   m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 0
@@ -163,21 +162,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &6577251270067738689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1210574459495550903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 757a5fa33f6ee4f45b56cf402da28f70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  content: {fileID: 7038367879035014805}
-  viewport: {fileID: 6378150915744889078}
-  scrollStep: 16
 --- !u!1 &1663993963036351908
 GameObject:
   m_ObjectHideFlags: 0

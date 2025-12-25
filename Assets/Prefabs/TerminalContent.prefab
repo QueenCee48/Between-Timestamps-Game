@@ -442,7 +442,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8872123769280620784}
   - component: {fileID: 2495212690851802473}
-  - component: {fileID: 2806621263569478125}
   m_Layer: 5
   m_Name: TerminalArea
   m_TagString: Untagged
@@ -484,7 +483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Content: {fileID: 1831737443054711548}
   m_Horizontal: 0
-  m_Vertical: 0
+  m_Vertical: 1
   m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 0
@@ -500,21 +499,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2806621263569478125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4734557090179771489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 757a5fa33f6ee4f45b56cf402da28f70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  content: {fileID: 1831737443054711548}
-  viewport: {fileID: 2940819678231559575}
-  scrollStep: 16
 --- !u!1 &4924605969284471700
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,7 +535,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 303.975, y: -0}
+  m_AnchoredPosition: {x: 303.975, y: -180}
   m_SizeDelta: {x: 607.95, y: 0}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &5499349879465708337

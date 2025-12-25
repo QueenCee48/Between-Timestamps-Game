@@ -24,7 +24,7 @@ public class WindowController : MonoBehaviour, IDragHandler, IPointerDownHandler
     // Start is called before the first frame update
     void Start()
     {
-        SetScrollState(false);
+        
     }
 
     // Update is called once per frame
@@ -35,10 +35,7 @@ public class WindowController : MonoBehaviour, IDragHandler, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        DisableAllWindowScrolling();
-
         rect.SetAsLastSibling();
-        SetScrollState(true);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -96,25 +93,5 @@ public class WindowController : MonoBehaviour, IDragHandler, IPointerDownHandler
         }
 
         activeContentInstance = Instantiate(contentToSpawn, transform);
-    }
-
-    void SetScrollState(bool enabled)
-    {
-        ScrollRect[] scrollRects = GetComponentsInChildren<ScrollRect>(true);
-
-        foreach (ScrollRect sr in scrollRects)
-        {
-            sr.enabled = enabled;
-        }
-    }
-
-    void DisableAllWindowScrolling()
-    {
-        WindowController[] windows = FindObjectsOfType<WindowController>();
-
-        foreach (WindowController window in windows)
-        {
-            window.SetScrollState(false);
-        }
     }
 }

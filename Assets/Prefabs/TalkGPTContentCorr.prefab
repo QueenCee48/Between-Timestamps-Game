@@ -287,7 +287,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8076075210483352023}
   - component: {fileID: 5447969806192586379}
-  - component: {fileID: 8829694785155971679}
   m_Layer: 5
   m_Name: TalkGPTConvoArea
   m_TagString: Untagged
@@ -329,7 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Content: {fileID: 2997646791406631260}
   m_Horizontal: 0
-  m_Vertical: 0
+  m_Vertical: 1
   m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 0
@@ -345,21 +344,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8829694785155971679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2306954304548288652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 757a5fa33f6ee4f45b56cf402da28f70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  content: {fileID: 2997646791406631260}
-  viewport: {fileID: 7096001923695660021}
-  scrollStep: 16
 --- !u!1 &2434311078399481762
 GameObject:
   m_ObjectHideFlags: 0
