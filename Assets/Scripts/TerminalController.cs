@@ -78,14 +78,29 @@ public class TerminalController : MonoBehaviour
                 break;
             case "status":
                 response = "\nSystem Status: ONLINE \nTemporal Sync: DEGRADED \nMemory Drift: 12.7% \n\nWarning: Drift exceeds recommended limits";
+
+                if (!ItemsReadState.Instance.statusReadPres)
+                {
+                    ItemsReadState.Instance.statusReadPres = true;
+                }
                 break;
             case "history":
                 response = "\nSystem Event History \n\n[02/15/1993 11:58:21] System boot \n[02/15/1993 12:01:04] Calibration complete \n[02/15/1993 12:39:55] Memory scan initiated";
                 response += "\n[02/15/1998 12:43:18] Temporal variance spike detected \n[02/15/1998 12:43:18] Event unresolved";
+
+                if (!ItemsReadState.Instance.historyReadPres)
+                {
+                    ItemsReadState.Instance.historyReadPres = true;
+                }
                 break;
             case "diagnose":
                 response = "\nDiagnostics Report \nMemory Integrity: DEGRADED \nTemporal Alignment: UNSTABLE \nError Rate: 14.6%";
                 response += "\n\nWarning: Continuing operation may cause memory bleed";
+
+                if (!ItemsReadState.Instance.diagnoseReadPres)
+                {
+                    ItemsReadState.Instance.diagnoseReadPres = true;
+                }
                 break;
             case "exit":
                 response = "\nSession terminated";
@@ -110,13 +125,28 @@ public class TerminalController : MonoBehaviour
                 break;
             case "status":
                 response = "\nSystem Status: ONLINE \nTemporal Sync: STABLE \nMemory Drift: 0.02%";
+
+                if (!ItemsReadState.Instance.statusReadPast)
+                {
+                    ItemsReadState.Instance.statusReadPast = true;
+                }
                 break;
             case "history":
                 response = "\nSystem Event History \n\n[02/15/1993 11:58:21] System boot \n[02/15/1993 12:01:04] Calibration complete \n[02/15/1993 12:39:55] Memory scan initiated";
                 response += "\n\nNo critical events recorded";
+
+                if (!ItemsReadState.Instance.historyReadPast)
+                {
+                    ItemsReadState.Instance.historyReadPast = true;
+                }
                 break;
             case "diagnose":
                 response = "\nDiagnostics Report \nMemory Integrity: OK \nTemporal Alignment: OK \nError Rate: 0.01% \n\nNo action required";
+
+                if (!ItemsReadState.Instance.diagnoseReadPast)
+                {
+                    ItemsReadState.Instance.diagnoseReadPast = true;
+                }
                 break;
             case "exit":
                 response = "\nSession terminated";
@@ -141,13 +171,28 @@ public class TerminalController : MonoBehaviour
                 break;
             case "status":
                 response = "\nSystem Status: RUNNING \nTemporal Sync: FAILED \nMemory Drift: 68.9% \n\nRecommendation: TERMINATE SESSION";
+                
+                if (!ItemsReadState.Instance.statusReadCorr)
+                {
+                    ItemsReadState.Instance.statusReadCorr = true;
+                }
                 break;
             case "history":
                 response = "\nSystem Event History \n\n[02/15/1993 11:58:21] System boot \n[02/15/1998 11:58:21] System boot \n[02/15/1993 12:43:18] Temporal variance spike detected";
                 response += "\n[02/15/1998 12:43:18] Temporal variance spike detected \n[02/15/1998 12:43:18] Temporal variance spike detected";
+
+                if (!ItemsReadState.Instance.historyReadCorr)
+                {
+                    ItemsReadState.Instance.historyReadCorr = true;
+                }
                 break;
             case "diagnose":
                 response = "\nDiagnostics Report \nMemory Integrity: UNKNOWN \nTemporal Alignment: FAILED \nError Rate: ___% \n\nRecommendation: _________ _______";
+
+                if (!ItemsReadState.Instance.diagnoseReadCorr)
+                {
+                    ItemsReadState.Instance.diagnoseReadCorr = true;
+                }
                 break;
             case "exit":
                 response = "\nUnable to terminate";

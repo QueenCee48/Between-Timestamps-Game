@@ -45,9 +45,17 @@ Completed:
 
 Completed:
 - Fix bug that makes terminal, messages and talkgpt scroll simultaneously instead of individually.
+- Trash content is complete.
+- Reused the photos/file explorer logic for the trash app.
+
+12/26/25
+
+Completed:
+- Implemented variables to use for determining an ending.
 
 Next To-Do:
-- Next app
+- Consider options for the corruption analyzer app
+- Decide ending conditions
 
 Possible Future Fixes:
 - Prevent the same window/file from having multiple instances open...
@@ -69,5 +77,3 @@ Planned Features:
 - start with the assignment window open
 - assignment button can have the window that opens to the assignment. 
 - icon on the right can be where the notifications pop up
-- track when files are open
-- Variables to keep track of which files were opened or not...

@@ -18,7 +18,7 @@ public class MsgsController : MonoBehaviour, IPointerClickHandler
     public Image notiBbl;
     Image myThreadImg;
 
-    TimeController timeCntrlr3;
+    private TimeController timeCntrlr;
     
     public MsgsThreadMngr manager;
 
@@ -49,7 +49,7 @@ public class MsgsController : MonoBehaviour, IPointerClickHandler
 
         myThreadImg = GetComponent<Image>();
 
-        timeCntrlr3 = GameObject.Find("TimeControls").GetComponent<TimeController>();
+        timeCntrlr = GameObject.Find("TimeControls").GetComponent<TimeController>();
     }
 
     // Start is called before the first frame update
@@ -57,11 +57,33 @@ public class MsgsController : MonoBehaviour, IPointerClickHandler
     {
         if (gameObject.name == "ValeThread")
         {
-            notiBbl.enabled = !ItemsReadState.Instance.valeMsgRead;
+            if (timeCntrlr.IsInPresent()) 
+            {
+                notiBbl.enabled = !ItemsReadState.Instance.valeMsgReadPres;
+            }
+            else if (timeCntrlr.IsInPast())
+            {
+                notiBbl.enabled = !ItemsReadState.Instance.valeMsgReadPast;
+            }
+            else if (timeCntrlr.IsInCorrupt())
+            {
+                notiBbl.enabled = !ItemsReadState.Instance.valeMsgReadCorr;
+            }
         }
         else if (gameObject.name == "EvanThread")
         {
-            notiBbl.enabled = !ItemsReadState.Instance.evanMsgRead;
+            if (timeCntrlr.IsInPresent()) 
+            {
+                notiBbl.enabled = !ItemsReadState.Instance.evanMsgReadPres;
+            }
+            else if (timeCntrlr.IsInPast())
+            {
+                notiBbl.enabled = !ItemsReadState.Instance.evanMsgReadPast;
+            }
+            else if (timeCntrlr.IsInCorrupt())
+            {
+                notiBbl.enabled = !ItemsReadState.Instance.evanMsgReadCorr;
+            }
         }
     }
 
@@ -75,63 +97,157 @@ public class MsgsController : MonoBehaviour, IPointerClickHandler
     {
         manager.SelectThread(this);
 
+        // Messages
         if (gameObject.name == "ValeThread")
         {
-            if (!ItemsReadState.Instance.valeMsgRead)
+            if (timeCntrlr.IsInPresent()) 
             {
-                ItemsReadState.Instance.valeMsgRead = true;
-
-                if (notiBbl != null)
+                if (!ItemsReadState.Instance.valeMsgReadPres)
                 {
-                    notiBbl.enabled = false;
+                    ItemsReadState.Instance.valeMsgReadPres = true;
+
+                    if (notiBbl != null)
+                    {
+                        notiBbl.enabled = false;
+                    }
+                }
+            }
+            else if (timeCntrlr.IsInPast())
+            {
+                if (!ItemsReadState.Instance.valeMsgReadPast)
+                {
+                    ItemsReadState.Instance.valeMsgReadPast = true;
+
+                    if (notiBbl != null)
+                    {
+                        notiBbl.enabled = false;
+                    }
+                }
+            }
+            else if (timeCntrlr.IsInCorrupt())
+            {
+                if (!ItemsReadState.Instance.valeMsgReadCorr)
+                {
+                    ItemsReadState.Instance.valeMsgReadCorr = true;
+
+                    if (notiBbl != null)
+                    {
+                        notiBbl.enabled = false;
+                    }
                 }
             }
         }
         else if (gameObject.name == "EvanThread")
         {
-            if (!ItemsReadState.Instance.evanMsgRead)
+            if (timeCntrlr.IsInPresent()) 
             {
-                ItemsReadState.Instance.evanMsgRead = true;
-
-                if (notiBbl != null)
+                if (!ItemsReadState.Instance.evanMsgReadPres)
                 {
-                    notiBbl.enabled = false;
+                    ItemsReadState.Instance.evanMsgReadPres = true;
+
+                    if (notiBbl != null)
+                    {
+                        notiBbl.enabled = false;
+                    }
+                }
+            }
+            else if (timeCntrlr.IsInPast())
+            {
+                if (!ItemsReadState.Instance.evanMsgReadPast)
+                {
+                    ItemsReadState.Instance.evanMsgReadPast = true;
+
+                    if (notiBbl != null)
+                    {
+                        notiBbl.enabled = false;
+                    }
+                }
+            }
+            else if (timeCntrlr.IsInCorrupt())
+            {
+                if (!ItemsReadState.Instance.evanMsgReadCorr)
+                {
+                    ItemsReadState.Instance.evanMsgReadCorr = true;
+
+                    if (notiBbl != null)
+                    {
+                        notiBbl.enabled = false;
+                    }
                 }
             }
         }
+
+        // TalkGPT
         else if (gameObject.name == "ProjectSummary")
         {
-            if (!ItemsReadState.Instance.projSummRead)
+            if (timeCntrlr.IsInPresent()) 
             {
-                ItemsReadState.Instance.projSummRead = true;
+                if (!ItemsReadState.Instance.projSummReadPres)
+                {
+                    ItemsReadState.Instance.projSummReadPres = true;
+                }
+            }
+            else if (timeCntrlr.IsInPast())
+            {
+                if (!ItemsReadState.Instance.projSummReadPast)
+                {
+                    ItemsReadState.Instance.projSummReadPast = true;
+                }
+            }
+            else if (timeCntrlr.IsInCorrupt())
+            {
+                if (!ItemsReadState.Instance.projSummReadCorr)
+                {
+                    ItemsReadState.Instance.projSummReadCorr = true;
+                }
             }
         }
         else if (gameObject.name == "ProfessionalReflection")
         {
-            if (!ItemsReadState.Instance.profReflRead)
+            if (timeCntrlr.IsInPresent()) 
             {
-                ItemsReadState.Instance.profReflRead = true;
+                if (!ItemsReadState.Instance.profReflReadPres)
+                {
+                    ItemsReadState.Instance.profReflReadPres = true;
+                }
+            }
+            else if (timeCntrlr.IsInPast())
+            {
+                if (!ItemsReadState.Instance.profReflReadPast)
+                {
+                    ItemsReadState.Instance.profReflReadPast = true;
+                }
+            }
+            else if (timeCntrlr.IsInCorrupt())
+            {
+                if (!ItemsReadState.Instance.profReflReadCorr)
+                {
+                    ItemsReadState.Instance.profReflReadCorr = true;
+                }
             }
         }
         else if (gameObject.name == "TemporalErasure")
         {
-            if (!ItemsReadState.Instance.tempErasRead)
+            if (timeCntrlr.IsInCorrupt())
             {
-                ItemsReadState.Instance.tempErasRead = true;
+                if (!ItemsReadState.Instance.tempErasReadCorr)
+                {
+                    ItemsReadState.Instance.tempErasReadCorr = true;
+                }
             }
         }
     }
 
     public void SetSelected()
     {
-        if (timeCntrlr3.IsInPresent()) {
+        if (timeCntrlr.IsInPresent()) {
             myThreadImg.color = selectedColorPres;
         }
-        else if (timeCntrlr3.IsInPast())
+        else if (timeCntrlr.IsInPast())
         {
             myThreadImg.color = selectedColorPast;
         }
-        else if (timeCntrlr3.IsInCorrupt())
+        else if (timeCntrlr.IsInCorrupt())
         {
             myThreadImg.color = selectedColorCorr;
         }
@@ -139,14 +255,14 @@ public class MsgsController : MonoBehaviour, IPointerClickHandler
 
     public void SetUnselected()
     {
-        if (timeCntrlr3.IsInPresent()) {
+        if (timeCntrlr.IsInPresent()) {
             myThreadImg.color = unselectedColorPres;
         }
-        else if (timeCntrlr3.IsInPast())
+        else if (timeCntrlr.IsInPast())
         {
             myThreadImg.color = unselectedColorPast;
         }
-        else if (timeCntrlr3.IsInCorrupt())
+        else if (timeCntrlr.IsInCorrupt())
         {
             myThreadImg.color = unselectedColorCorr;
         }
