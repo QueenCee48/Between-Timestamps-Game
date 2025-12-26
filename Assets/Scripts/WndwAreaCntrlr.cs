@@ -45,6 +45,10 @@ public class WndwAreaCntrlr : MonoBehaviour
     public GameObject talkgptPastContent;
     public GameObject talkgptCorrContent;
 
+    public GameObject trashPresContent;
+    public GameObject trashPastContent;
+    public GameObject trashCorrContent;
+
     private string lastLayer;
 
     // Start is called before the first frame update
@@ -107,6 +111,7 @@ public class WndwAreaCntrlr : MonoBehaviour
                 break;
             case "Trash":
                 windowCntrlr.SetTitle("Trash");
+                windowCntrlr.SetWindowContent(trashPresContent, trashPastContent, trashCorrContent, timeCntrlr);
                 break;
             case "Messages":
                 windowCntrlr.SetTitle("Messages");
@@ -159,6 +164,7 @@ public class WndwAreaCntrlr : MonoBehaviour
                         window.GetComponent<WindowController>().SetWindowContent(talkgptPresContent, talkgptPastContent, talkgptCorrContent, timeCntrlr);
                         break;
                     case "Trash":
+                        window.GetComponent<WindowController>().SetWindowContent(trashPresContent, trashPastContent, trashCorrContent, timeCntrlr);
                         break;
                     case "Messages":
                         window.GetComponent<WindowController>().SetWindowContent(msgsPresContent, msgsPastContent, msgsCorrContent, timeCntrlr);
@@ -208,7 +214,4 @@ public class WndwAreaCntrlr : MonoBehaviour
             }
         }
     }
-
-
-    
 }

@@ -44,22 +44,20 @@ Completed:
 12/25/25
 
 Completed:
-- 
+- Fix bug that makes terminal, messages and talkgpt scroll simultaneously instead of individually.
 
 Next To-Do:
-- Fix bug that makes terminal, messages and talkgpt scroll simultaneously instead of individually.
+- Next app
 
 Possible Future Fixes:
 - Prevent the same window/file from having multiple instances open...
-- Variables to keep track of which files were opened or not...
 - Once all versions of a file have been opened, either have them all reset to the correct one to stabilize OR the player gets to choose which one they all reset to to stabilize...
 - back to the future easter egg fading in the photos...
-- power button takes half the time away
 - speaker on desktop for sound
 - setup game state checker to see if each message thread in each time layer has been read
 - flash color of which timeline was affected
 - possibly deleting files
-- track when files are open...opening certain files removes the files in other layers
+- opening certain files removes the files in other layers
 - settings for hints possibly
 - power button takes half the time away
 - info button for the photos to show the metadata
@@ -71,4 +69,5 @@ Planned Features:
 - start with the assignment window open
 - assignment button can have the window that opens to the assignment. 
 - icon on the right can be where the notifications pop up
-- talkgpt convo with doctor about her asking how does she know if she's a good doc
+- track when files are open
+- Variables to keep track of which files were opened or not...

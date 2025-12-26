@@ -966,6 +966,9 @@ MonoBehaviour:
   talkgptPresContent: {fileID: 6052492906622575025, guid: 442b0f8d7691c3c429c0737e9dab5cbd, type: 3}
   talkgptPastContent: {fileID: 1681342989653031360, guid: bd02773756522de4b8244ad420ce82c8, type: 3}
   talkgptCorrContent: {fileID: 6473994531210218672, guid: 5aca87a0b374a354180915b716c18a42, type: 3}
+  trashPresContent: {fileID: 7212709488368027032, guid: a949682441a3a7a45b8750a409eee3f4, type: 3}
+  trashPastContent: {fileID: 3011953458993074153, guid: 59fe5f9f0ca6e624c99af8b0e4e093fe, type: 3}
+  trashCorrContent: {fileID: 4419711381413447501, guid: 4efc24dfe60967745a686271c34611b0, type: 3}
 --- !u!1 &1075418883
 GameObject:
   m_ObjectHideFlags: 0
