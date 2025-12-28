@@ -49,12 +49,20 @@ public class WndwAreaCntrlr : MonoBehaviour
     public GameObject trashPastContent;
     public GameObject trashCorrContent;
 
+    public GameObject assignmentContent;
+
+    public GameObject corrAnalyzerContent;
+
     private string lastLayer;
+
+    void Awake()
+    {
+        timeCntrlr = GameObject.Find("TimeControls").GetComponent<TimeController>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        timeCntrlr = GameObject.Find("TimeControls").GetComponent<TimeController>();
         lastLayer = timeCntrlr.currentLayer;
     }
 
@@ -119,6 +127,11 @@ public class WndwAreaCntrlr : MonoBehaviour
                 break;
             case "CorruptionAnalyzer":
                 windowCntrlr.SetTitle("Corruption Analyzer");
+                windowCntrlr.SetWindowContent(corrAnalyzerContent, corrAnalyzerContent, corrAnalyzerContent, timeCntrlr);
+                break;
+            case "AssignmentDetails":
+                windowCntrlr.SetTitle("Assignment Details");
+                windowCntrlr.SetWindowContent(assignmentContent, assignmentContent, assignmentContent, timeCntrlr);
                 break;
         }
     }
@@ -170,6 +183,10 @@ public class WndwAreaCntrlr : MonoBehaviour
                         window.GetComponent<WindowController>().SetWindowContent(msgsPresContent, msgsPastContent, msgsCorrContent, timeCntrlr);
                         break;
                     case "Corruption Analyzer":
+                        window.GetComponent<WindowController>().SetWindowContent(corrAnalyzerContent, corrAnalyzerContent, corrAnalyzerContent, timeCntrlr);
+                        break;
+                    case "AssignmentDetails":
+                        window.GetComponent<WindowController>().SetWindowContent(assignmentContent, assignmentContent, assignmentContent, timeCntrlr);
                         break;
                 }
             }

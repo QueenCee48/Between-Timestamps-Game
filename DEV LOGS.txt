@@ -52,28 +52,34 @@ Completed:
 
 Completed:
 - Implemented variables to use for determining an ending.
+- Assignment window complete.
+
+12/27/25
+
+Completed:
+- Corruption analyzer app content is complete.
+
+12/28/25
+
+Completed:
+- Decided ending conditions and setup logic to check
+- Setup game ending screens
+- Setup submit report button
 
 Next To-Do:
-- Consider options for the corruption analyzer app
-- Decide ending conditions
+- BG music
+- sound fx
 
-Possible Future Fixes:
+Possible Future Fixes/Features:
 - Prevent the same window/file from having multiple instances open...
-- Once all versions of a file have been opened, either have them all reset to the correct one to stabilize OR the player gets to choose which one they all reset to to stabilize...
-- back to the future easter egg fading in the photos...
 - speaker on desktop for sound
-- setup game state checker to see if each message thread in each time layer has been read
 - flash color of which timeline was affected
 - possibly deleting files
 - opening certain files removes the files in other layers
 - settings for hints possibly
-- power button takes half the time away
+- power button increases corruption bar by half...
 - info button for the photos to show the metadata
+- notification can be repeat reminders to submit report
+- icon on the right can be where the notifications pop up
 
 Planned Features:
-- filler/content 1-2 files in recycle bin on all layers
-- possibly time pressure to submit report
-- notification can be repeat reminders to submit report
-- start with the assignment window open
-- assignment button can have the window that opens to the assignment. 
-- icon on the right can be where the notifications pop up
