@@ -22,6 +22,12 @@ public class ScreenController : MonoBehaviour
     bool logoScreenOn;
     bool endingScreenOn;
 
+    public AudioSource endingScreenAudio;
+
+    // BG music by Yuriy Efimenko on Unity Asset Store
+    // UI Sound fx by HoveAudio on Unity Asset Store
+    // Horror sound fx by DHSFX on Unity Asset Store
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +44,7 @@ public class ScreenController : MonoBehaviour
     public void SubmitReport()
     {
         if (!logoScreenOn) {
+            endingScreenAudio.Play();
             endingScreen.enabled = true;
             Time.timeScale = 0;
             endingScreenOn = true;

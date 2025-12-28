@@ -122,6 +122,9 @@ public class ItemsReadState : MonoBehaviour
 
     ScreenController canvas;
 
+    AudioSource audioSource;
+    public AudioSource windowAreaAudio;
+
     void Awake()
     {
         if (Instance != null)
@@ -217,6 +220,7 @@ public class ItemsReadState : MonoBehaviour
     void Start()
     {
         canvas = GameObject.Find("Canvas").GetComponent<ScreenController>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -285,6 +289,16 @@ public class ItemsReadState : MonoBehaviour
                 }
                 countedPast.Add(entry.Key);
             }
+        }
+
+        if (corruptionIndex/corruptionThreshold == 0.75f)
+        {
+            audioSource.Play();
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            windowAreaAudio.Play();
         }
 
         if (corruptionIndex >= corruptionThreshold)
