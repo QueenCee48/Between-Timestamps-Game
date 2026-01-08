@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -55,9 +56,14 @@ public class WndwAreaCntrlr : MonoBehaviour
 
     private string lastLayer;
 
+    public Dictionary<GameObject, String> openWndws;
+    public Dictionary<GameObject, String> openFls;
+
     void Awake()
     {
         timeCntrlr = GameObject.Find("TimeControls").GetComponent<TimeController>();
+        openWndws = new Dictionary<GameObject, String>();
+        openFls = new Dictionary<GameObject, String>();
     }
 
     // Start is called before the first frame update
@@ -79,6 +85,11 @@ public class WndwAreaCntrlr : MonoBehaviour
 
     public void OpenWindow(string appName)
     {
+        if (openWndws.ContainsValue(appName))
+        {
+            return;
+        }
+
         newWindow = Instantiate(windowPrefab, transform);
         windowCntrlr = newWindow.GetComponent<WindowController>();
         
@@ -134,6 +145,10 @@ public class WndwAreaCntrlr : MonoBehaviour
                 windowCntrlr.SetWindowContent(assignmentContent, assignmentContent, assignmentContent, timeCntrlr);
                 break;
         }
+
+        newWindow.GetComponent<WindowController>().appName = appName;
+
+        openWndws.Add(newWindow, appName);
     }
 
     void UpdateWindows()
@@ -193,8 +208,13 @@ public class WndwAreaCntrlr : MonoBehaviour
         }
     }
 
-    public void OpenFile(GameObject txtFile, Sprite presImg, Sprite pastImg, Sprite corrImg)
+    public void OpenFile(GameObject txtFile, Sprite presImg, Sprite pastImg, Sprite corrImg, String fileName)
     {
+        if (openFls.ContainsValue(fileName))
+        {
+            return;
+        }
+
         newFile = Instantiate(txtFile, transform);
 
         txtFileCntrlr = newFile.GetComponent<TxtFileController>();
@@ -217,6 +237,10 @@ public class WndwAreaCntrlr : MonoBehaviour
         {
             newFile.GetComponent<Image>().sprite = corrImage;
         }
+
+        newFile.GetComponent<TxtFileController>().fileName = fileName;
+
+        openFls.Add(newFile, fileName);
     }
 
     void UpdateFiles() 

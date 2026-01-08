@@ -36,7 +36,7 @@ public class TxtIconController : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        wndwAreaCntrlr.OpenFile(txtFilePrefab, presImg, pastImg, corrImg);
+        wndwAreaCntrlr.OpenFile(txtFilePrefab, presImg, pastImg, corrImg, txtIconLabel.text);
 
         // File Explorer
         if (gameObject.name == "ReadMe") {

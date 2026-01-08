@@ -15,8 +15,11 @@ public class TxtFileController : MonoBehaviour, IDragHandler, IPointerDownHandle
     public Sprite pastImage;
     public Sprite corrImage;
 
+    private WndwAreaCntrlr wndwAreaCntrlr;
     private TimeController timeCntrlr;
     Image img;
+
+    public string fileName;
 
     void Awake()
     {
@@ -26,6 +29,7 @@ public class TxtFileController : MonoBehaviour, IDragHandler, IPointerDownHandle
 
         img = GetComponent<Image>();
         timeCntrlr = GameObject.Find("TimeControls").GetComponent<TimeController>();
+        wndwAreaCntrlr = GameObject.Find("WindowArea").GetComponent<WndwAreaCntrlr>();
     }
 
     // Start is called before the first frame update
@@ -89,6 +93,7 @@ public class TxtFileController : MonoBehaviour, IDragHandler, IPointerDownHandle
 
     public void CloseFile()
     {
+        wndwAreaCntrlr.openFls.Remove(this.gameObject, out fileName);
         Destroy(gameObject);
     }
 }

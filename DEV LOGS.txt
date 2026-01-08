@@ -68,3 +68,8 @@ Completed:
 - BG music
 - sound fx
 
+1/8/26
+
+Completed:
+- prevent duplicate windows and files from opening
+- the above fixed the illusion that the close(x) button wasn't working

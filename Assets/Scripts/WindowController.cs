@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System;
 
 public class WindowController : MonoBehaviour, IDragHandler, IPointerDownHandler
 {
@@ -11,14 +12,18 @@ public class WindowController : MonoBehaviour, IDragHandler, IPointerDownHandler
     RectTransform parentRect;
 
     public Text titleText;
+    public String appName;
 
     GameObject activeContentInstance;
+
+    private WndwAreaCntrlr wndwAreaCntrlr;
 
     void Awake()
     {
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
         rect = GetComponent<RectTransform>();
         parentRect = GameObject.Find("WindowArea").GetComponent<RectTransform>();
+        wndwAreaCntrlr = GameObject.Find("WindowArea").GetComponent<WndwAreaCntrlr>();
     }
 
     // Start is called before the first frame update
@@ -67,6 +72,7 @@ public class WindowController : MonoBehaviour, IDragHandler, IPointerDownHandler
 
     public void CloseWindow()
     {
+        wndwAreaCntrlr.openWndws.Remove(this.gameObject, out appName);
         Destroy(gameObject);
     }
 
