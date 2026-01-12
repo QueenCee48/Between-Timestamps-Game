@@ -98,7 +98,7 @@ public class ItemsReadState : MonoBehaviour
     public bool tempDispReadCorr = false;
     public bool resiPresReadCorr = false;
 
-    public float corruptionThreshold = 80;
+    public float corruptionThreshold = 480;
     public float corruptionIndex = 0;
     float corruptionTimer = 0;
 
@@ -230,7 +230,7 @@ public class ItemsReadState : MonoBehaviour
 
         if (corruptionTimer >= 1)
         {
-            corruptionIndex += 0.25f;
+            corruptionIndex += 0.05f;
             corruptionTimer = 0;
         }
 
