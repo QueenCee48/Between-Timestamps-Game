@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class WndwAreaCntrlr : MonoBehaviour
 {
@@ -87,6 +88,8 @@ public class WndwAreaCntrlr : MonoBehaviour
     {
         if (openWndws.ContainsValue(appName))
         {
+            GameObject existingWindow = openWndws.FirstOrDefault(x => x.Value == appName).Key;
+            existingWindow.GetComponent<RectTransform>().SetAsLastSibling();
             return;
         }
 
@@ -212,6 +215,8 @@ public class WndwAreaCntrlr : MonoBehaviour
     {
         if (openFls.ContainsValue(fileName))
         {
+            GameObject existingFile = openFls.FirstOrDefault(x => x.Value == fileName).Key;
+            existingFile.GetComponent<RectTransform>().SetAsLastSibling();
             return;
         }
 

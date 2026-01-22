@@ -62,20 +62,24 @@ Completed:
 12/28/25
 
 Completed:
-- Decided ending conditions and setup logic to check
-- Setup game ending screens
-- Setup submit report button
-- BG music
-- sound fx
+- Decided ending conditions and setup logic to check.
+- Setup game ending screens.
+- Setup submit report button.
+- Added BG music & sound fx.
 
 1/8/26
 
 Completed:
-- prevent duplicate windows and files from opening
-- the above fixed the illusion that the close(x) button wasn't working
+- Prevent duplicate windows and files from opening.
+- The above fixed the illusion that the close(x) button wasn't working.
 
 1/12/26
 
 Completed:
-- Increase corrupted threshold to allow for more in-depth exploration 
+- Increase corrupted threshold to allow for more in-depth exploration. 
   (threshold may change based on features that are added...)
+
+1/22/26
+
+Completed:
+- Brings the open window/file to the front if player tries to open it again.
